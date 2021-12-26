@@ -19,7 +19,7 @@ if __name__ == '__main__':
   soup = BeautifulSoup(r.text, features="html.parser")
   pages = soup.find(class_="pagination").findAll(class_="page-link")
   max_pages = int(pages[-2].next)
-  print("there are {0} pages of content".format(max_pages))
+  print("retreiving {0} pages of full content".format(max_pages - 1))
   
   # create folder for data to be stored into
   os.mkdir("data")
